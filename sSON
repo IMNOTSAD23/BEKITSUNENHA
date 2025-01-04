@@ -1,0 +1,21 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.ClipsDescendants = true
+ImageLabel.Position = UDim2.new(0.0493680872, 0, -0.0139082056, 0)
+ImageLabel.Size = UDim2.new(0, 852, 0, 590)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=126417586773988"
+game:GetService("Players").LocalPlayer:Kick("YOU HAVE BEEN BANED ")

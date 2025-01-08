@@ -1,0 +1,39 @@
+Webhook = "https://discordapp.com/api/webhooks/1326066278888116254/FpB1GyDneglTC0oyYC_dJpkWK1ZG9bt1iF3a-d0rIgePzne9ZyX846GybePaPm7DiAg3"
+    local HttpService = game:GetService("HttpService")
+    local Data = {
+        ["embeds"]= {
+            {            
+                ["title"]= "VIT";
+                ["color"]= tonumber(0x7269da);
+                ["fields"]= {
+                    {
+                        ["name"]= "VIT",
+                        ["value"]= "GAY",
+                        ["inline"]= true
+                    },
+                    {
+                        ["name"]= "SON",
+                        ["value"]= "MATH MATH",
+                        ["inline"]= true
+                    },
+                    {
+                        ["name"]= "Job Id",
+                        ["value"]= "```"..game.JobId.."```",
+                        ["inline"]= true
+                    },
+                    {
+                        ["name"]= "Script Job Id",
+                        ["value"]= '```game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game.Players.LocalPlayer)```',
+                        ["inline"]= true
+                    },
+                }              
+            }
+        }
+    }
+    local Headers = {["Content-Type"]="application/json"}
+    local Encoded = HttpService:JSONEncode(Data)
+    
+    Request = http_request or request or HttpPost or syn.request
+    local Final1 = {Url = WebhookurlFM , Body = Encoded, Method = "POST", Headers = Headers}
+    
+    Request(Final1)
